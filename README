@@ -1,0 +1,21 @@
+Badly programmed script to get your amazon orders into a sqlite3 database and draw a graph of your monthly outgoing.
+Works only with amazon.de at the moment.
+
+Usage:
+
+- copy .moneywaste-example to you homedir as .moneywaste
+- create sqlite3 database named `moneywaste` and import table from `moneywaste.sql`
+- run `moneywaste.rb startyear endyear`
+- you can also run the data collecting task and draw taks seperatly:
+  - `moneywaste.rb startyear endyear data`
+  - `moneywaste.rb startyear endyear draw`
+- example: `moneywaste.rb 2011 2012`
+
+
+Todos:
+
+- add error handling
+- add configuration options for login-url, order-url and graph-filename
+- change script to work with other amazon sites (.com, .co.uk, ...)
+- learn to write good code
+- improve code quality
