@@ -118,10 +118,10 @@ def getfromamazon(year_start, year_end)
 
     orderslist.each do |order|
 
-      order_exist = db.get_first_value( "select count(id) from moneywaste where name = '#{order['name']}' and price = '#{order['price']}' and order_id = '#{order['order_id']}' and date = '#{order['date']}'" )
+      order_exist = db.get_first_value( "select count(id) from moneywaste where name = ? and price = '#{order['price']}' and order_id = '#{order['order_id']}' and date = '#{order['date']}'", "#{order['name']}" )
 
       unless order_exist > 0
-        db.execute( "insert into moneywaste ('name','price','order_id','date') values ('#{order['name']}','#{order['price']}','#{order['order_id']}','#{order['date']}')" )
+        db.execute( "insert into moneywaste ('name','price','order_id','date') values (?,'#{order['price']}','#{order['order_id']}','#{order['date']}')", "#{order['name']}" )
       end
 
       if order_exist > 1
