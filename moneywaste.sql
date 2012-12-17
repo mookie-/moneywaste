@@ -4,4 +4,4 @@ CREATE TABLE moneywaste (
     "price" INT NOT NULL,
     "order_id" TEXT NOT NULL,
     "date" DATETIME NOT NULL
-)
+);

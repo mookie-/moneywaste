@@ -5,6 +5,8 @@ Usage:
 
 - copy .moneywaste-example to you homedir as .moneywaste
 - create sqlite3 database named `moneywaste` and import table from `moneywaste.sql`
+  - `sqlite3 moneywaste.sqlite`
+  - `.read moneywaste.sql`
 - run `moneywaste.rb startyear endyear`
 - you can also run the data collecting task and draw taks seperatly:
   - `moneywaste.rb startyear endyear data`
